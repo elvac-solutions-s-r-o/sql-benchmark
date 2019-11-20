@@ -15,7 +15,7 @@ namespace SimpleQueryBenchmark
     //[CsvExporter]
     [SqlExporter]
     //[SimpleJob(RunStrategy.ColdStart, launchCount: 1, warmupCount: 5, targetCount: 5, id: "SqlBenchmarkJob")]
-    [SimpleJob(RunStrategy.Monitoring, targetCount: 10, id: "MonitoringJob")]
+    //[SimpleJob(RunStrategy.ColdStart, targetCount: 1, invocationCount: 1, warmupCount: 0, launchCount: 1, id: "MonitoringJob")]
     [MinColumn, Q1Column, Q3Column, MaxColumn]
     public class QueryBenchmark
     {
